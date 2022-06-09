@@ -9,11 +9,10 @@ var mongoose = require('mongoose');
 // var Blog = mongoose.model('Blog');
 
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Portfolio' });
+/* GET about page. */
+
+router.get('/about', function(req, res, next) {
+  res.render('about', { title: 'Portfolio' });
 }); 
 
-
 module.exports = router;
-
