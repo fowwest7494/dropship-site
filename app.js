@@ -15,6 +15,8 @@ var app = express();
 // Routes
 var indexRouter = require('./app_server/routes/index');
 var aboutRouter = require('./app_server/routes/about');
+var teamRouter = require('./app_server/routes/team');
+var blogRouter = require('./app_server/routes/blog');
 var usersRouter = require('./app_server/routes/users');
 
 app.set('views', path.join(__dirname, './app_server/views'));
@@ -28,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
+app.use('/team', teamRouter);
+app.use('/blog', blogRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

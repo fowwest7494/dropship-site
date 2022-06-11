@@ -1,0 +1,108 @@
+extends layout
+
+block content
+  body.page-team
+    // ======= Header =======
+    header#header.header.d-flex.align-items-center.fixed-top
+      .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center(href='index.html')
+          // Uncomment the line below if you also wish to use an image logo
+          // <img src="assets/img/logo.png" alt="">
+          h1.d-flex.align-items-center= name
+        i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
+        i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
+        include ./includes/navbar
+        // .navbar
+    // End Header
+    main#main
+      // ======= Breadcrumbs =======
+      .breadcrumbs.d-flex.align-items-center(style="background-image: url('assets/img/team-header.jpg');")
+        .container.position-relative.d-flex.flex-column.align-items-center
+          h2 Team
+          ol
+            li
+              a(href='index.html') Home
+            li Team
+      // End Breadcrumbs
+      // ======= Team Section =======
+      section#team.team
+        .container(data-aos='fade-up')
+          .section-header
+            h2 Our Team
+          .row.gy-4
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='100')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-1.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Walter White
+                  span Chief Executive Officer
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='200')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-2.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Sarah Jhonson
+                  span Product Manager
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='300')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-3.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 William Anderson
+                  span CTO
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='400')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-4.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Amanda Jepson
+                  span Accountant
+            // End Team Member
+      // End Team Section
+    // End #main
+    // ======= Footer =======
+    include ./includes/footer
+    // End Footer
+    a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    #preloader

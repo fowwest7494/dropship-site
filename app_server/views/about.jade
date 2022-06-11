@@ -8,56 +8,13 @@ block content
         a.logo.d-flex.align-items-center(href='index.html')
           // Uncomment the line below if you also wish to use an image logo
           // <img src="assets/img/logo.png" alt="">
-          h1.d-flex.align-items-center Nova
+          h1.d-flex.align-items-center= name
         i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
         i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
-        nav#navbar.navbar
-          ul
-            li
-              a(href='index.html') Home
-            li
-              a.active(href='about') About
-            li
-              a(href='services.html') Services
-            li
-              a(href='portfolio.html') Portfolio
-            li
-              a(href='team.html') Team
-            li
-              a(href='blog.html') Blog
-            li.dropdown
-              a(href='#')
-                span Dropdown
-                |  
-                i.bi.bi-chevron-down.dropdown-indicator
-              ul
-                li
-                  a(href='#') Dropdown 1
-                li.dropdown
-                  a(href='#')
-                    span Deep Dropdown
-                    |  
-                    i.bi.bi-chevron-down.dropdown-indicator
-                  ul
-                    li
-                      a(href='#') Deep Dropdown 1
-                    li
-                      a(href='#') Deep Dropdown 2
-                    li
-                      a(href='#') Deep Dropdown 3
-                    li
-                      a(href='#') Deep Dropdown 4
-                    li
-                      a(href='#') Deep Dropdown 5
-                li
-                  a(href='#') Dropdown 2
-                li
-                  a(href='#') Dropdown 3
-                li
-                  a(href='#') Dropdown 4
-            li
-              a(href='contact.html') Contact
+
+        include ./includes/navbar
         // .navbar
+        
     // End Header
     main#main
       // ======= Breadcrumbs =======
@@ -292,9 +249,9 @@ block content
               p
                 | A108 Adam Street 
                 br
-                            New York, NY 535022
+                New York, NY 535022
                 br
-                            United States 
+                United States 
                 br
                 br
                 strong Phone:

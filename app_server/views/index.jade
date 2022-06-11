@@ -8,63 +8,17 @@ block content
         a.logo.d-flex.align-items-center(href='index.html')
           // Uncomment the line below if you also wish to use an image logo
           // <img src="./assets/img/logo.png" alt="">
-          h1.d-flex.align-items-center Forrest Carlton
+          h1.d-flex.align-items-center= name
         i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
         i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
-        nav#navbar.navbar
-          ul
-            li
-              a.active(href='index.html') Home
-            li
-              a(href='about') About
-            li
-              a(href='services') Services
-            li
-              a(href='portfolio') Portfolio
-            li
-              a(href='team') Team
-            li
-              a(href='blog') Blog
-            li.dropdown
-              a(href='#')
-                span Dropdown
-                |  
-                i.bi.bi-chevron-down.dropdown-indicator
-              ul
-                li
-                  a(href='#') Dropdown 1
-                li.dropdown
-                  a(href='#')
-                    span Deep Dropdown
-                    |  
-                    i.bi.bi-chevron-down.dropdown-indicator
-                  ul
-                    li
-                      a(href='#') Deep Dropdown 1
-                    li
-                      a(href='#') Deep Dropdown 2
-                    li
-                      a(href='#') Deep Dropdown 3
-                    li
-                      a(href='#') Deep Dropdown 4
-                    li
-                      a(href='#') Deep Dropdown 5
-                li
-                  a(href='#') Dropdown 2
-                li
-                  a(href='#') Dropdown 3
-                li
-                  a(href='#') Dropdown 4
-            li
-              a(href='contact.html') Contact
-        // .navbar
+        include ./includes/navbar
     // End Header
     // ======= Hero Section =======
     section#hero.hero.d-flex.align-items-center
       .container
         .row
           .col-xl-4
-            h2(data-aos='fade-up') Fullstack Developer
+            h2(data-aos='fade-up') Fullstack Development
             blockquote(data-aos='fade-up', data-aos-delay='100')
               p
                 | Primary focus is on the MEAN/MERN stacks. From frontend, to backend, to mobile. Javascript developer.
@@ -315,89 +269,7 @@ block content
                   i.bi.bi-arrow-right
       // End Recent Blog Posts Section
     // End #main
-    // ======= Footer =======
-    footer#footer.footer
-      .footer-content
-        .container
-          .row.gy-4
-            .col-lg-5.col-md-12.footer-info
-              a.logo.d-flex.align-items-center(href='index.html')
-                span Forrest Carlton
-              p
-                | Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.
-              .social-links.d-flex.mt-3
-                a.twitter(href='https://twitter.com/')
-                  i.bi.bi-twitter
-                a.facebook(href='#')
-                  i.bi.bi-facebook
-                a.instagram(href='#')
-                  i.bi.bi-instagram
-                a.linkedin(href='#')
-                  i.bi.bi-linkedin
-            .col-lg-2.col-6.footer-links
-              h4 Useful Links
-              ul
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Home
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') About us
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Services
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Terms of service
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Privacy policy
-            .col-lg-2.col-6.footer-links
-              h4 Our Services
-              ul
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Web Design
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Web Development
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Product Management
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Marketing
-                li
-                  i.bi.bi-dash
-                  |  
-                  a(href='#') Graphic Design
-            .col-lg-3.col-md-12.footer-contact.text-center.text-md-start
-              h4 Contact Us
-
-      .footer-legal
-        .container
-          .copyright
-            | &copy; Copyright 
-            strong
-              span Nova
-            | . All Rights Reserved
-          .credits
-            // All the links in the footer should remain intact.
-            // You can delete the links only if you purchased the pro version.
-            // Licensing information: https://bootstrapmade.com/license/
-            // Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nova-bootstrap-business-template/
-            | Designed by 
-            a(href='https://bootstrapmade.com/') BootstrapMade
-    // End Footer
-    // End Footer
+    // Footer
+    include ./includes/footer
     a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
       i.bi.bi-arrow-up-short

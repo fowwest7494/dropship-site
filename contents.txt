@@ -1,0 +1,21 @@
+ Volume in drive C is Windows
+ Volume Serial Number is 8EAE-9B25
+
+ Directory of C:\Users\fowwe\OneDrive\Desktop\portfolio
+
+06/08/2022  09:19 PM    <DIR>          .
+06/07/2022  10:27 PM    <DIR>          ..
+06/06/2022  05:30 PM                54 .env
+06/08/2022  12:12 PM                13 .gitignore
+06/08/2022  02:58 PM             1,375 app.js
+06/06/2022  03:17 PM    <DIR>          app_api
+06/07/2022  06:00 PM    <DIR>          app_server
+06/06/2022  01:09 PM    <DIR>          bin
+06/08/2022  09:19 PM                 0 contents.txt
+06/08/2022  09:18 PM    <DIR>          new_project
+06/08/2022  01:46 PM    <DIR>          node_modules
+06/08/2022  01:46 PM           184,396 package-lock.json
+06/08/2022  01:46 PM               507 package.json
+06/08/2022  11:39 AM    <DIR>          public
+               6 File(s)        186,345 bytes
+               8 Dir(s)  64,252,583,936 bytes free

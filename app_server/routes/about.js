@@ -11,8 +11,8 @@ var mongoose = require('mongoose');
 
 /* GET about page. */
 
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Portfolio' });
+router.get('/', function(req, res, next) {
+  res.render('about', { title: 'Portfolio', name: 'FC Development' });
 }); 
 
 module.exports = router;
