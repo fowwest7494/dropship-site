@@ -1,0 +1,340 @@
+extends layout
+
+block content
+  body.page-blog
+    // ======= Header =======
+    header#header.header.d-flex.align-items-center.fixed-top
+      .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center(href='index.html')
+          // Uncomment the line below if you also wish to use an image logo
+          // <img src="assets/img/logo.png" alt="">
+          h1.d-flex.align-items-center Nova
+        i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
+        i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
+        include ./includes/navbar
+        // .navbar
+    // End Header
+    main#main
+      // ======= Breadcrumbs =======
+      .breadcrumbs.d-flex.align-items-center(style="background-image: url('assets/img/blog-header.jpg');")
+        .container.position-relative.d-flex.flex-column.align-items-center
+          h2 Blog Details
+          ol
+            li
+              a(href='index.html') Home
+            li Blog Details
+      // End Breadcrumbs
+      // ======= Blog Details Section =======
+      section#blog.blog
+        .container(data-aos='fade-up')
+          .row.g-5
+            .col-lg-8(data-aos='fade-up', data-aos-delay='200')
+              article.blog-details
+                .post-img
+                  img.img-fluid(src='assets/img/blog/blog-1.jpg', alt='')
+                h2.title Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia
+                .meta-top
+                  ul
+                    li.d-flex.align-items-center
+                      i.bi.bi-person
+                      |  
+                      a(href='blog-details.html') John Doe
+                    li.d-flex.align-items-center
+                      i.bi.bi-clock
+                      |  
+                      a(href='blog-details.html')
+                        time(datetime='2020-01-01') Jan 1, 2022
+                    li.d-flex.align-items-center
+                      i.bi.bi-chat-dots
+                      |  
+                      a(href='blog-details.html') 12 Comments
+                // End meta top
+                .content
+                  p
+                    | Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                    | Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                  p
+                    | Sit repellat hic cupiditate hic ut nemo. Quis nihil sunt non reiciendis. Sequi in accusamus harum vel aspernatur. Excepturi numquam nihil cumque odio. Et voluptate cupiditate.
+                  blockquote
+                    p
+                      | Et vero doloremque tempore voluptatem ratione vel aut. Deleniti sunt animi aut. Aut eos aliquam doloribus minus autem quos.
+                  p
+                    | Sed quo laboriosam qui architecto. Occaecati repellendus omnis dicta inventore tempore provident voluptas mollitia aliquid. Id repellendus quia. Asperiores nihil magni dicta est suscipit perspiciatis. Voluptate ex rerum assumenda dolores nihil quaerat.
+                    | Dolor porro tempora et quibusdam voluptas. Beatae aut at ad qui tempore corrupti velit quisquam rerum. Omnis dolorum exercitationem harum qui qui blanditiis neque.
+                    | Iusto autem itaque. Repudiandae hic quae aspernatur ea neque qui. Architecto voluptatem magni. Vel magnam quod et tempora deleniti error rerum nihil tempora.
+                  h3 Et quae iure vel ut odit alias.
+                  p
+                    | Officiis animi maxime nulla quo et harum eum quis a. Sit hic in qui quos fugit ut rerum atque. Optio provident dolores atque voluptatem rem excepturi molestiae qui. Voluptatem laborum omnis ullam quibusdam perspiciatis nulla nostrum. Voluptatum est libero eum nesciunt aliquid qui.
+                    | Quia et suscipit non sequi. Maxime sed odit. Beatae nesciunt nesciunt accusamus quia aut ratione aspernatur dolor. Sint harum eveniet dicta exercitationem minima. Exercitationem omnis asperiores natus aperiam dolor consequatur id ex sed. Quibusdam rerum dolores sint consequatur quidem ea.
+                    | Beatae minima sunt libero soluta sapiente in rem assumenda. Et qui odit voluptatem. Cum quibusdam voluptatem voluptatem accusamus mollitia aut atque aut.
+                  img.img-fluid(src='assets/img/blog/blog-inside-post.jpg', alt='')
+                  h3 Ut repellat blanditiis est dolore sunt dolorum quae.
+                  p
+                    | Rerum ea est assumenda pariatur quasi et quam. Facilis nam porro amet nostrum. In assumenda quia quae a id praesentium. Quos deleniti libero sed occaecati aut porro autem. Consectetur sed excepturi sint non placeat quia repellat incidunt labore. Autem facilis hic dolorum dolores vel.
+                    | Consectetur quasi id et optio praesentium aut asperiores eaque aut. Explicabo omnis quibusdam esse. Ex libero illum iusto totam et ut aut blanditiis. Veritatis numquam ut illum ut a quam vitae.
+                  p
+                    | Alias quia non aliquid. Eos et ea velit. Voluptatem maxime enim omnis ipsa voluptas incidunt. Nulla sit eaque mollitia nisi asperiores est veniam.
+                // End post content
+                .meta-bottom
+                  i.bi.bi-folder
+                  ul.cats
+                    li
+                      a(href='#') Business
+                  i.bi.bi-tags
+                  ul.tags
+                    li
+                      a(href='#') Creative
+                    li
+                      a(href='#') Tips
+                    li
+                      a(href='#') Marketing
+                // End meta bottom
+              // End blog post
+              .post-author.d-flex.align-items-center
+                img.rounded-circle.flex-shrink-0(src='assets/img/blog/blog-author.jpg', alt='')
+                div
+                  h4 Jane Smith
+                  .social-links
+                    a(href='https://twitters.com/#')
+                      i.bi.bi-twitter
+                    a(href='https://facebook.com/#')
+                      i.bi.bi-facebook
+                    a(href='https://instagram.com/#')
+                      i.biu.bi-instagram
+                  p
+                    | Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+              // End post author
+              .comments
+                h4.comments-count 8 Comments
+                #comment-1.comment
+                  .d-flex
+                    .comment-img
+                      img(src='assets/img/blog/comments-1.jpg', alt='')
+                    div
+                      h5
+                        a(href='') Georgia Reader
+                        |  
+                        a.reply(href='#')
+                          i.bi.bi-reply-fill
+                          |  Reply
+                      time(datetime='2020-01-01') 01 Jan,2022
+                      p
+                        | Et rerum totam nisi. Molestiae vel quam dolorum vel voluptatem et et. Est ad aut sapiente quis molestiae est qui cum soluta.
+                        | Vero aut rerum vel. Rerum quos laboriosam placeat ex qui. Sint qui facilis et.
+                // End comment #1
+                #comment-2.comment
+                  .d-flex
+                    .comment-img
+                      img(src='assets/img/blog/comments-2.jpg', alt='')
+                    div
+                      h5
+                        a(href='') Aron Alvarado
+                        |  
+                        a.reply(href='#')
+                          i.bi.bi-reply-fill
+                          |  Reply
+                      time(datetime='2020-01-01') 01 Jan,2022
+                      p
+                        | Ipsam tempora sequi voluptatem quis sapiente non. Autem itaque eveniet saepe. Officiis illo ut beatae.
+                  #comment-reply-1.comment.comment-reply
+                    .d-flex
+                      .comment-img
+                        img(src='assets/img/blog/comments-3.jpg', alt='')
+                      div
+                        h5
+                          a(href='') Lynda Small
+                          |  
+                          a.reply(href='#')
+                            i.bi.bi-reply-fill
+                            |  Reply
+                        time(datetime='2020-01-01') 01 Jan,2022
+                        p
+                          | Enim ipsa eum fugiat fuga repellat. Commodi quo quo dicta. Est ullam aspernatur ut vitae quia mollitia id non. Qui ad quas nostrum rerum sed necessitatibus aut est. Eum officiis sed repellat maxime vero nisi natus. Amet nesciunt nesciunt qui illum omnis est et dolor recusandae.
+                          | Recusandae sit ad aut impedit et. Ipsa labore dolor impedit et natus in porro aut. Magnam qui cum. Illo similique occaecati nihil modi eligendi. Pariatur distinctio labore omnis incidunt et illum. Expedita et dignissimos distinctio laborum minima fugiat.
+                          | Libero corporis qui. Nam illo odio beatae enim ducimus. Harum reiciendis error dolorum non autem quisquam vero rerum neque.
+                    #comment-reply-2.comment.comment-reply
+                      .d-flex
+                        .comment-img
+                          img(src='assets/img/blog/comments-4.jpg', alt='')
+                        div
+                          h5
+                            a(href='') Sianna Ramsay
+                            |  
+                            a.reply(href='#')
+                              i.bi.bi-reply-fill
+                              |  Reply
+                          time(datetime='2020-01-01') 01 Jan,2022
+                          p
+                            | Et dignissimos impedit nulla et quo distinctio ex nemo. Omnis quia dolores cupiditate et. Ut unde qui eligendi sapiente omnis ullam. Placeat porro est commodi est officiis voluptas repellat quisquam possimus. Perferendis id consectetur necessitatibus.
+                    // End comment reply #2
+                  // End comment reply #1
+                // End comment #2
+                #comment-3.comment
+                  .d-flex
+                    .comment-img
+                      img(src='assets/img/blog/comments-5.jpg', alt='')
+                    div
+                      h5
+                        a(href='') Nolan Davidson
+                        |  
+                        a.reply(href='#')
+                          i.bi.bi-reply-fill
+                          |  Reply
+                      time(datetime='2020-01-01') 01 Jan,2022
+                      p
+                        | Distinctio nesciunt rerum reprehenderit sed. Iste omnis eius repellendus quia nihil ut accusantium tempore. Nesciunt expedita id dolor exercitationem aspernatur aut quam ut. Voluptatem est accusamus iste at.
+                        | Non aut et et esse qui sit modi neque. Exercitationem et eos aspernatur. Ea est consequuntur officia beatae ea aut eos soluta. Non qui dolorum voluptatibus et optio veniam. Quam officia sit nostrum dolorem.
+                // End comment #3
+                #comment-4.comment
+                  .d-flex
+                    .comment-img
+                      img(src='assets/img/blog/comments-6.jpg', alt='')
+                    div
+                      h5
+                        a(href='') Kay Duggan
+                        |  
+                        a.reply(href='#')
+                          i.bi.bi-reply-fill
+                          |  Reply
+                      time(datetime='2020-01-01') 01 Jan,2022
+                      p
+                        | Dolorem atque aut. Omnis doloremque blanditiis quia eum porro quis ut velit tempore. Cumque sed quia ut maxime. Est ad aut cum. Ut exercitationem non in fugiat.
+                // End comment #4
+                .reply-form
+                  h4 Leave a Reply
+                  p Your email address will not be published. Required fields are marked * 
+                  form(action='')
+                    .row
+                      .col-md-6.form-group
+                        input.form-control(name='name', type='text', placeholder='Your Name*')
+                      .col-md-6.form-group
+                        input.form-control(name='email', type='text', placeholder='Your Email*')
+                    .row
+                      .col.form-group
+                        input.form-control(name='website', type='text', placeholder='Your Website')
+                    .row
+                      .col.form-group
+                        textarea.form-control(name='comment', placeholder='Your Comment*')
+                    button.btn.btn-primary(type='submit') Post Comment
+              // End blog comments
+            .col-lg-4(data-aos='fade-up', data-aos-delay='400')
+              .sidebar.ps-lg-4
+                .sidebar-item.search-form
+                  h3.sidebar-title Search
+                  form.mt-3(action='')
+                    input(type='text')
+                    button(type='submit')
+                      i.bi.bi-search
+                // End sidebar search formn
+                .sidebar-item.categories
+                  h3.sidebar-title Categories
+                  ul.mt-3
+                    li
+                      a(href='#')
+                        | General 
+                        span (25)
+                    li
+                      a(href='#')
+                        | Lifestyle 
+                        span (12)
+                    li
+                      a(href='#')
+                        | Travel 
+                        span (5)
+                    li
+                      a(href='#')
+                        | Design 
+                        span (22)
+                    li
+                      a(href='#')
+                        | Creative 
+                        span (8)
+                    li
+                      a(href='#')
+                        | Educaion 
+                        span (14)
+                // End sidebar categories
+                .sidebar-item.recent-posts
+                  h3.sidebar-title Recent Posts
+                  .mt-3
+                    .post-item.mt-3
+                      img.flex-shrink-0(src='assets/img/blog/blog-recent-1.jpg', alt='')
+                      div
+                        h4
+                          a(href='blog-post.html') Nihil blanditiis at in nihil autem
+                        time(datetime='2020-01-01') Jan 1, 2020
+                    // End recent post item
+                    .post-item
+                      img.flex-shrink-0(src='assets/img/blog/blog-recent-2.jpg', alt='')
+                      div
+                        h4
+                          a(href='blog-post.html') Quidem autem et impedit
+                        time(datetime='2020-01-01') Jan 1, 2020
+                    // End recent post item
+                    .post-item
+                      img.flex-shrink-0(src='assets/img/blog/blog-recent-3.jpg', alt='')
+                      div
+                        h4
+                          a(href='blog-post.html') Id quia et et ut maxime similique occaecati ut
+                        time(datetime='2020-01-01') Jan 1, 2020
+                    // End recent post item
+                    .post-item
+                      img.flex-shrink-0(src='assets/img/blog/blog-recent-4.jpg', alt='')
+                      div
+                        h4
+                          a(href='blog-post.html') Laborum corporis quo dara net para
+                        time(datetime='2020-01-01') Jan 1, 2020
+                    // End recent post item
+                    .post-item
+                      img.flex-shrink-0(src='assets/img/blog/blog-recent-5.jpg', alt='')
+                      div
+                        h4
+                          a(href='blog-post.html') Et dolores corrupti quae illo quod dolor
+                        time(datetime='2020-01-01') Jan 1, 2020
+                    // End recent post item
+                // End sidebar recent posts
+                .sidebar-item.tags
+                  h3.sidebar-title Tags
+                  ul.mt-3
+                    li
+                      a(href='#') App
+                    li
+                      a(href='#') IT
+                    li
+                      a(href='#') Business
+                    li
+                      a(href='#') Mac
+                    li
+                      a(href='#') Design
+                    li
+                      a(href='#') Office
+                    li
+                      a(href='#') Creative
+                    li
+                      a(href='#') Studio
+                    li
+                      a(href='#') Smart
+                    li
+                      a(href='#') Tips
+                    li
+                      a(href='#') Marketing
+                // End sidebar tags
+              // End Blog Sidebar
+      // End Blog Details Section
+    // End #main
+    // ======= Footer =======
+    include ./includes/footer
+    // End Footer
+    // End Footer
+    a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    #preloader
+    // Vendor JS Files
+    script(src='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    script(src='assets/vendor/aos/aos.js')
+    script(src='assets/vendor/glightbox/js/glightbox.min.js')
+    script(src='assets/vendor/swiper/swiper-bundle.min.js')
+    script(src='assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    script(src='assets/vendor/php-email-form/validate.js')
+    // Template Main JS File
+    script(src='assets/js/main.js')

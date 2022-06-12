@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  body.page-contact
+  // ======= Header =======
+  header#header.header.d-flex.align-items-center.fixed-top
+    .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+      a.logo.d-flex.align-items-center(href='index.html')
+        // Uncomment the line below if you also wish to use an image logo
+        // <img src="assets/img/logo.png" alt="">
+        h1.d-flex.align-items-center Nova
+      i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
+      i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
+      include ./includes/navbar
+  // End Header
+  main#main
+    // ======= Breadcrumbs =======
+    .breadcrumbs.d-flex.align-items-center(style="background-image: url('assets/img/contact-header.jpg');")
+      .container.position-relative.d-flex.flex-column.align-items-center
+        h2 Contact
+        ol
+          li
+            a(href='index.html') Home
+          li Contact
+    // End Breadcrumbs
+    // ======= Contact Section =======
+    section#contact.contact
+      .container.position-relative(data-aos='fade-up')
+        .row.gy-4.d-flex.justify-content-end
+          .col-lg-5(data-aos='fade-up', data-aos-delay='100')
+            .info-item.d-flex
+              i.bi.bi-geo-alt.flex-shrink-0
+              div
+                h4 Location:
+                p A108 Adam Street, New York, NY 535022
+            // End Info Item
+            .info-item.d-flex
+              i.bi.bi-envelope.flex-shrink-0
+              div
+                h4 Email:
+                p info@example.com
+            // End Info Item
+            .info-item.d-flex
+              i.bi.bi-phone.flex-shrink-0
+              div
+                h4 Call:
+                p +1 5589 55488 55
+            // End Info Item
+          .col-lg-6(data-aos='fade-up', data-aos-delay='250')
+            form.php-email-form(action='forms/contact.php', method='post', role='form')
+              .row
+                .col-md-6.form-group
+                  input#name.form-control(type='text', name='name', placeholder='Your Name', required='')
+                .col-md-6.form-group.mt-3.mt-md-0
+                  input#email.form-control(type='email', name='email', placeholder='Your Email', required='')
+              .form-group.mt-3
+                input#subject.form-control(type='text', name='subject', placeholder='Subject', required='')
+              .form-group.mt-3
+                textarea.form-control(name='message', rows='5', placeholder='Message', required='')
+              .my-3
+                .loading Loading
+                .error-message
+                .sent-message Your message has been sent. Thank you!
+              .text-center
+                button(type='submit') Send Message
+          // End Contact Form
+    // End Contact Section
+  // End #main 
+  include ./includes/footer
+  a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
+    i.bi.bi-arrow-up-short
+  #preloader
+  // Vendor JS Files
+  script(src='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+  script(src='assets/vendor/aos/aos.js')
+  script(src='assets/vendor/glightbox/js/glightbox.min.js')
+  script(src='assets/vendor/swiper/swiper-bundle.min.js')
+  script(src='assets/vendor/isotope-layout/isotope.pkgd.min.js')
+  script(src='assets/vendor/php-email-form/validate.js')
+  // Template Main JS File
+  script(src='assets/js/main.js')

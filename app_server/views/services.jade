@@ -1,0 +1,236 @@
+extends layout
+
+block content
+  body.page-services
+    // ======= Header =======
+    header#header.header.d-flex.align-items-center.fixed-top
+      .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center(href='index.html')
+          // Uncomment the line below if you also wish to use an image logo
+          // <img src="assets/img/logo.png" alt="">
+          h1.d-flex.align-items-center Nova
+        i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
+        i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
+        include ./includes/navbar
+        // .navbar
+    // End Header
+    main#main
+      // ======= Breadcrumbs =======
+      .breadcrumbs.d-flex.align-items-center(style="background-image: url('assets/img/services-header.jpg');")
+        .container.position-relative.d-flex.flex-column.align-items-center
+          h2 Services
+          ol
+            li
+              a(href='index.html') Home
+            li Services
+      // End Breadcrumbs
+      // ======= Our Services Section =======
+      section#services-list.services-list
+        .container(data-aos='fade-up')
+          .section-header
+            h2 Our Services
+          .row.gy-5
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='100')
+              .icon.flex-shrink-0
+                i.bi.bi-briefcase(style='color: #f57813;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Lorem Ipsum
+                p.description
+                  | Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
+            // End Service Item
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='200')
+              .icon.flex-shrink-0
+                i.bi.bi-card-checklist(style='color: #15a04a;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Dolor Sitema
+                p.description
+                  | Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata
+            // End Service Item
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='300')
+              .icon.flex-shrink-0
+                i.bi.bi-bar-chart(style='color: #d90769;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Sed ut perspiciatis
+                p.description
+                  | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+            // End Service Item
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='400')
+              .icon.flex-shrink-0
+                i.bi.bi-binoculars(style='color: #15bfbc;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Magni Dolores
+                p.description
+                  | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            // End Service Item
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='500')
+              .icon.flex-shrink-0
+                i.bi.bi-brightness-high(style='color: #f5cf13;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Nemo Enim
+                p.description
+                  | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque
+            // End Service Item
+            .col-lg-4.col-md-6.service-item.d-flex(data-aos='fade-up', data-aos-delay='600')
+              .icon.flex-shrink-0
+                i.bi.bi-calendar4-week(style='color: #1335f5;')
+              div
+                h4.title
+                  a.stretched-link(href='#') Eiusmod Tempor
+                p.description
+                  | Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi
+            // End Service Item
+      // End Our Services Section
+      // ======= Services Cards Section =======
+      section#services-cards.services-cards
+        .container(data-aos='fade-up')
+          .row.gy-4
+            .col-lg-6(data-aos='fade-up', data-aos-delay='100')
+              .card-item
+                .row
+                  .col-xl-5
+                    .card-bg(style='background-image: url(assets/img/cards-1.jpg);')
+                  .col-xl-7.d-flex.align-items-center
+                    .card-body
+                      h4.card-title Eligendi omnis sunt veritatis.
+                      p
+                        | Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.
+            // End Card Item
+            .col-lg-6(data-aos='fade-up', data-aos-delay='200')
+              .card-item
+                .row
+                  .col-xl-5
+                    .card-bg(style='background-image: url(assets/img/cards-2.jpg);')
+                  .col-xl-7.d-flex.align-items-center
+                    .card-body
+                      h4.card-title Possimus ut sed velit assumenda
+                      p
+                        | Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.
+            // End Card Item
+            .col-lg-6(data-aos='fade-up', data-aos-delay='300')
+              .card-item
+                .row
+                  .col-xl-5
+                    .card-bg(style='background-image: url(assets/img/cards-3.jpg);')
+                  .col-xl-7.d-flex.align-items-center
+                    .card-body
+                      h4.card-title Error beatae dolor inventore aut
+                      p
+                        | Dicta porro nobis. Velit cum in. Nesciunt dignissimos enim molestiae facilis numquam quae quaerat ipsam omnis. Neque debitis ipsum at architecto officia laboriosam odit. Ut sunt temporibus nulla culpa.
+            // End Card Item
+            .col-lg-6(data-aos='fade-up', data-aos-delay='400')
+              .card-item
+                .row
+                  .col-xl-5
+                    .card-bg(style='background-image: url(assets/img/cards-4.jpg);')
+                  .col-xl-7.d-flex.align-items-center
+                    .card-body
+                      h4.card-title Expedita voluptas ut ut nesciunt
+                      p
+                        | Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione dolores. Aut aliquid ea dolores libero nobis.
+            // End Card Item
+      // End Services Cards Section
+      // ======= Testimonials Section =======
+      section#testimonials.testimonials
+        .container(data-aos='fade-up')
+          .section-header
+            h2 Testimonials
+          .slides-3.swiper(data-aos='fade-up', data-aos-delay='100')
+            .swiper-wrapper
+              .swiper-slide
+                .testimonial-item
+                  .stars
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                  p
+                    | Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  .profile.mt-auto
+                    img.testimonial-img(src='assets/img/testimonials/testimonials-1.jpg', alt='')
+                    h3 Saul Goodman
+                    h4 Ceo &amp; Founder
+              // End testimonial item
+              .swiper-slide
+                .testimonial-item
+                  .stars
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                  p
+                    | Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  .profile.mt-auto
+                    img.testimonial-img(src='assets/img/testimonials/testimonials-2.jpg', alt='')
+                    h3 Sara Wilsson
+                    h4 Designer
+              // End testimonial item
+              .swiper-slide
+                .testimonial-item
+                  .stars
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                  p
+                    | Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  .profile.mt-auto
+                    img.testimonial-img(src='assets/img/testimonials/testimonials-3.jpg', alt='')
+                    h3 Jena Karlis
+                    h4 Store Owner
+              // End testimonial item
+              .swiper-slide
+                .testimonial-item
+                  .stars
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                  p
+                    | Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  .profile.mt-auto
+                    img.testimonial-img(src='assets/img/testimonials/testimonials-4.jpg', alt='')
+                    h3 Matt Brandon
+                    h4 Freelancer
+              // End testimonial item
+              .swiper-slide
+                .testimonial-item
+                  .stars
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                    i.bi.bi-star-fill
+                  p
+                    | Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  .profile.mt-auto
+                    img.testimonial-img(src='assets/img/testimonials/testimonials-5.jpg', alt='')
+                    h3 John Larson
+                    h4 Entrepreneur
+              // End testimonial item
+            .swiper-pagination
+      // End Testimonials Section
+    // End #main
+    // ======= Footer =======
+    include ./includes/footer
+    // End Footer
+    a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    #preloader
+    // Vendor JS Files
+    script(src='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    script(src='assets/vendor/aos/aos.js')
+    script(src='assets/vendor/glightbox/js/glightbox.min.js')
+    script(src='assets/vendor/swiper/swiper-bundle.min.js')
+    script(src='assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    script(src='assets/vendor/php-email-form/validate.js')
+    // Template Main JS File
+    script(src='assets/js/main.js')
