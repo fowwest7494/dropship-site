@@ -5,10 +5,10 @@ block content
     // ======= Header =======
     header#header.header.d-flex.align-items-center.fixed-top
       .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
-        a.logo.d-flex.align-items-center(href='index.html')
+        a.logo.d-flex.align-items-center(href='/)
           // Uncomment the line below if you also wish to use an image logo
           // <img src="assets/img/logo.png" alt="">
-          h1.d-flex.align-items-center Nova
+          h1.d-flex.align-items-center= name
         i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
         i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
         include ./includes/navbar
@@ -21,7 +21,7 @@ block content
           h2 Services
           ol
             li
-              a(href='index.html') Home
+              a(href='/') Home
             li Services
       // End Breadcrumbs
       // ======= Our Services Section =======

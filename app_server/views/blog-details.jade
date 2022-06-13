@@ -5,10 +5,10 @@ block content
     // ======= Header =======
     header#header.header.d-flex.align-items-center.fixed-top
       .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
-        a.logo.d-flex.align-items-center(href='index.html')
+        a.logo.d-flex.align-items-center(href='index')
           // Uncomment the line below if you also wish to use an image logo
           // <img src="assets/img/logo.png" alt="">
-          h1.d-flex.align-items-center Nova
+          h1.d-flex.align-items-center= name
         i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
         i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
         include ./includes/navbar
@@ -21,7 +21,7 @@ block content
           h2 Blog Details
           ol
             li
-              a(href='index.html') Home
+              a(href='index') Home
             li Blog Details
       // End Breadcrumbs
       // ======= Blog Details Section =======
@@ -38,16 +38,16 @@ block content
                     li.d-flex.align-items-center
                       i.bi.bi-person
                       |  
-                      a(href='blog-details.html') John Doe
+                      a(href='blog-details') John Doe
                     li.d-flex.align-items-center
                       i.bi.bi-clock
                       |  
-                      a(href='blog-details.html')
+                      a(href='blog-details')
                         time(datetime='2020-01-01') Jan 1, 2022
                     li.d-flex.align-items-center
                       i.bi.bi-chat-dots
                       |  
-                      a(href='blog-details.html') 12 Comments
+                      a(href='blog-details') 12 Comments
                 // End meta top
                 .content
                   p
@@ -261,35 +261,35 @@ block content
                       img.flex-shrink-0(src='assets/img/blog/blog-recent-1.jpg', alt='')
                       div
                         h4
-                          a(href='blog-post.html') Nihil blanditiis at in nihil autem
+                          a(href='blog-post') Nihil blanditiis at in nihil autem
                         time(datetime='2020-01-01') Jan 1, 2020
                     // End recent post item
                     .post-item
                       img.flex-shrink-0(src='assets/img/blog/blog-recent-2.jpg', alt='')
                       div
                         h4
-                          a(href='blog-post.html') Quidem autem et impedit
+                          a(href='blog-post') Quidem autem et impedit
                         time(datetime='2020-01-01') Jan 1, 2020
                     // End recent post item
                     .post-item
                       img.flex-shrink-0(src='assets/img/blog/blog-recent-3.jpg', alt='')
                       div
                         h4
-                          a(href='blog-post.html') Id quia et et ut maxime similique occaecati ut
+                          a(href='blog-post') Id quia et et ut maxime similique occaecati ut
                         time(datetime='2020-01-01') Jan 1, 2020
                     // End recent post item
                     .post-item
                       img.flex-shrink-0(src='assets/img/blog/blog-recent-4.jpg', alt='')
                       div
                         h4
-                          a(href='blog-post.html') Laborum corporis quo dara net para
+                          a(href='blog-post') Laborum corporis quo dara net para
                         time(datetime='2020-01-01') Jan 1, 2020
                     // End recent post item
                     .post-item
                       img.flex-shrink-0(src='assets/img/blog/blog-recent-5.jpg', alt='')
                       div
                         h4
-                          a(href='blog-post.html') Et dolores corrupti quae illo quod dolor
+                          a(href='blog-post') Et dolores corrupti quae illo quod dolor
                         time(datetime='2020-01-01') Jan 1, 2020
                     // End recent post item
                 // End sidebar recent posts
