@@ -14,14 +14,6 @@ var app = express();
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
-var aboutRouter = require('./app_server/routes/about');
-var teamRouter = require('./app_server/routes/team');
-var blogRouter = require('./app_server/routes/blog');
-var portfolioRouter = require('./app_server/routes/portfolio');
-var servicesRouter = require('./app_server/routes/services');
-var blogDetailsRouter = require('./app_server/routes/blog-details');
-var contactRouter = require('./app_server/routes/contact');
-var portfolioDetailsRouter = require('./app_server/routes/portfolio-details');
 var usersRouter = require('./app_server/routes/users');
 var shopRouter = require('./app_server/routes/shop');
 
@@ -35,14 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/about', aboutRouter);
-app.use('/team', teamRouter);
-app.use('/blog', blogRouter);
-app.use('/portfolio', portfolioRouter);
-app.use('/services', servicesRouter);
-app.use('/blog-details', blogDetailsRouter);
-app.use('/contact', contactRouter);
-app.use('/portfolio-details', portfolioDetailsRouter);
 app.use('/users', usersRouter);
 app.use('/shop', shopRouter);
 
