@@ -16,6 +16,10 @@ var app = express();
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var shopRouter = require('./app_server/routes/shop');
+var detailRouter = require('./app_server/routes/detail');
+var cartRouter = require('./app_server/routes/cart');
+var contactRouter = require('./app_server/routes/contact');
+var checkoutRouter = require('./app_server/routes/checkout');
 
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');
@@ -29,7 +33,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/shop', shopRouter);
-
+app.use('/detail', detailRouter);
+app.use('/cart', cartRouter);
+app.use('/contact', contactRouter);
+app.use('/checkout', checkoutRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

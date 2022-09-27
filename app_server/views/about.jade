@@ -1,0 +1,185 @@
+extends layout
+
+block content
+  body.page-about
+    // ======= Header =======
+    header#header.header.d-flex.align-items-center.fixed-top
+      .container-fluid.container-xl.d-flex.align-items-center.justify-content-between
+        a.logo.d-flex.align-items-center(href='index.html')
+          // Uncomment the line below if you also wish to use an image logo
+          // <img src="assets/img/logo.png" alt="">
+          h1.d-flex.align-items-center= name
+        i.mobile-nav-toggle.mobile-nav-show.bi.bi-list
+        i.mobile-nav-toggle.mobile-nav-hide.d-none.bi.bi-x
+
+        include ./includes/navbar
+        // .navbar
+
+    // End Header
+    main#main
+      // ======= Breadcrumbs =======
+      .breadcrumbs.d-flex.align-items-center(style="background-image: url('assets/img/about-header.jpg');")
+        .container.position-relative.d-flex.flex-column.align-items-center
+          h2 About
+          ol
+            li
+              a(href='/') Home
+            li About
+      // End Breadcrumbs
+      // ======= About Section =======
+      section#about.about
+        .container(data-aos='fade-up')
+          .row.gy-4(data-aos='fade-up')
+            .col-lg-4
+              img.img-fluid(src='assets/img/about.jpg', alt='')
+            .col-lg-8
+              .content.ps-lg-5
+                h3 Voluptatem dignissimos provident quasi
+                p
+                  | Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                  | velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+                ul
+                  li
+                    i.bi.bi-check-circle-fill
+                    |  Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  li
+                    i.bi.bi-check-circle-fill
+                    |  Duis aute irure dolor in reprehenderit in voluptate velit.
+                  li
+                    i.bi.bi-check-circle-fill
+                    |  Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      // End About Section
+      // ======= Why Choose Us Section =======
+      section#why-us.why-us
+        .container(data-aos='fade-up')
+          .section-header
+            h2 Why Choose Us
+          .row.g-0(data-aos='fade-up', data-aos-delay='200')
+            .col-xl-5.img-bg(style="background-image: url('assets/img/why-us-bg.jpg')")
+            .col-xl-7.slides.position-relative
+              .slides-1.swiper
+                .swiper-wrapper
+                  .swiper-slide
+                    .item
+                      h3.mb-3 Let&apos;s grow your business together
+                      h4.mb-3
+                        | Optio reiciendis accusantium iusto architecto at quia minima maiores quidem, dolorum.
+                      p
+                        | Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ipsam perferendis asperiores explicabo vel tempore velit totam, natus nesciunt accusantium dicta quod quibusdam ipsum maiores nobis non, eum. Ullam reiciendis dignissimos laborum aut, magni voluptatem velit doloribus quas sapiente optio.
+                  // End slide item
+                  .swiper-slide
+                    .item
+                      h3.mb-3 Unde perspiciatis ut repellat dolorem
+                      h4.mb-3 Amet cumque nam sed voluptas doloribus iusto. Dolorem eos aliquam quis.
+                      p
+                        | Dolorem quia fuga consectetur voluptatem. Earum consequatur nulla maxime necessitatibus cum accusamus. Voluptatem dolorem ut numquam dolorum delectus autem veritatis facilis. Et ea ut repellat ea. Facere est dolores fugiat dolor.
+                  // End slide item
+                  .swiper-slide
+                    .item
+                      h3.mb-3 Aliquid non alias minus
+                      h4.mb-3 Necessitatibus voluptatibus explicabo dolores a vitae voluptatum.
+                      p
+                        | Neque voluptates aut. Soluta aut perspiciatis porro deserunt. Voluptate ut itaque velit. Aut consectetur voluptatem aspernatur sequi sit laborum. Voluptas enim dolorum fugiat aut.
+                  // End slide item
+                  .swiper-slide
+                    .item
+                      h3.mb-3 Necessitatibus suscipit non voluptatem quibusdam
+                      h4.mb-3
+                        | Tempora quos est ut quia adipisci ut voluptas. Deleniti laborum soluta nihil est. Eum similique neque autem ut.
+                      p
+                        | Ut rerum et autem vel. Et rerum molestiae aut sit vel incidunt sit at voluptatem. Saepe dolorem et sed voluptate impedit. Ad et qui sint at qui animi animi rerum.
+                  // End slide item
+                .swiper-pagination
+              .swiper-button-prev
+              .swiper-button-next
+      // End Why Choose Us Section
+      // ======= Call To Action Section =======
+      section#call-to-action.call-to-action
+        .container(data-aos='fade-up')
+          .row.justify-content-center
+            .col-lg-6.text-center
+              h3 Ut fugiat aliquam aut non
+              p
+                | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              a.cta-btn(href='#') Call To Action
+      // End Call To Action Section
+      // ======= Team Section =======
+      section#team.team
+        .container(data-aos='fade-up')
+          .section-header
+            h2 Our Team
+          .row.gy-4
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='100')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-1.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Walter White
+                  span Chief Executive Officer
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='200')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-2.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Sarah Jhonson
+                  span Product Manager
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='300')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-3.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 William Anderson
+                  span CTO
+            // End Team Member
+            .col-lg-3.col-md-6(data-aos='fade-up', data-aos-delay='400')
+              .team-member
+                .member-img
+                  img.img-fluid(src='assets/img/team/team-4.jpg', alt='')
+                  .social
+                    a(href='')
+                      i.bi.bi-twitter
+                    a(href='')
+                      i.bi.bi-facebook
+                    a(href='')
+                      i.bi.bi-instagram
+                    a(href='')
+                      i.bi.bi-linkedin
+                .member-info
+                  h4 Amanda Jepson
+                  span Accountant
+            // End Team Member
+      // End Team Section
+    // End #main
+    // ======= Footer =======
+    include ./includes/footer
+    a.scroll-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
