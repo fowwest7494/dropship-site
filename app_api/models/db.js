@@ -7,6 +7,8 @@ if (process.env.NODE_ENV === 'production'){
 	dbURI = process.env.MONGODB_URI;
 } 
 
+console.log(process.env.NODE_ENV);
+
 mongoose.connect(dbURI);
 
 /* Event Listeners */

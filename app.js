@@ -8,9 +8,9 @@ var session = require('express-session');
 
 var app = express();
 
-// console.log(process.env.DB_HOST)
-// console.log(process.env.HEROKU_URL);
-// console.log(process.env.MONGODB_URI);
+console.log(process.env.DB_HOST)
+console.log(process.env.HEROKU_URL);
+console.log(process.env.MONGODB_URI);
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
@@ -20,6 +20,7 @@ var detailRouter = require('./app_server/routes/detail');
 var cartRouter = require('./app_server/routes/cart');
 var contactRouter = require('./app_server/routes/contact');
 var checkoutRouter = require('./app_server/routes/checkout');
+var AuthRouter = require('./app_api/routes/auth')
 
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');
@@ -37,6 +38,10 @@ app.use('/detail', detailRouter);
 app.use('/cart', cartRouter);
 app.use('/contact', contactRouter);
 app.use('/checkout', checkoutRouter);
+
+//api
+app.use('/api', AuthRouter)
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
