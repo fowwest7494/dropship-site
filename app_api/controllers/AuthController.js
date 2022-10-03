@@ -6,26 +6,26 @@ const register = (req, res, next) => {
 	bcrypt.hash(req.body.password, 10, function(err, hashedPass) {
 		if(err) {
 			res.json({
-				error: err
+				error: "err"
 			})
 		}
-	})
 
-	let user = new User({
+		let user = new User({
 		name: req.body.name,
-		email: requ.body.email,
+		email: req.body.email,
 		phone: req.body.phone,
 		password: hashedPass
-	})
-	user.save()
-	.then(user => {
-		res.json({
-			message: 'User Added Successfully!'
 		})
-	})
-	.catch(error => {
-		res.json({
-			message: 'An Error occurred!'
+		user.save()
+		.then(user => {
+			res.json({
+				message: 'User Added Successfully!'
+			})
+		})
+		.catch(error => {
+			res.json({
+				message: 'An Error occurred!'
+			})
 		})
 	})
 }

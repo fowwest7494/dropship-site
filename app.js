@@ -12,6 +12,9 @@ console.log(process.env.DB_HOST)
 console.log(process.env.HEROKU_URL);
 console.log(process.env.MONGODB_URI);
 
+// Db connection
+require('./app_api/models/db');
+
 // Routes
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
