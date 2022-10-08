@@ -1,9 +1,8 @@
 button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; background-color: transparent;} onclick="document.getElementById('id02').style.display='block'") Register
-#id02.modal
+#id02.register_modal
   form.modal-content.animate(action='/api/register' method='post')
     .imgcontainer
       span.close(onclick="document.getElementById('id02').style.display='none'" title='Close Modal') ×
-      img.avatar(src='img_avatar2.png' alt='Avatar')
     .container
       label(for='firstName')
         b First Name
@@ -13,11 +12,10 @@ button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; backgroun
       input(type='text' placeholder='Enter last name' name='lastName' required='true')
       label(for='email')
         b Email
-      input(type='email' placeholder='Enter your email' name='email' required='true')
+      input(type='text' placeholder='Enter your email' name='email' required='true')
       label(for='password')
-        br
         b Password
-      input(type='password' placeholder='Enter new password' name='password' required='true')
+      input(type='text' placeholder='Enter new password' name='password' required='true')
       button(type='submit') Register
       label
         input(type='checkbox' checked='checked' name='remember')
