@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var ServerApiVersion = require('mongodb');
 var dbURI = 'mongodb://localhost:27017/Dropship_site';
 
 // If in production mode, use production database. Use MONGODB_URI instead of
@@ -9,7 +10,8 @@ if (process.env.NODE_ENV === 'production'){
 
 mongoose.connect(dbURI, {
 	useNewUrlParser: true,
-	useUnifiedTopology: true
+	useUnifiedTopology: true,
+	serverApi: ServerApiVersion.v1
 });
 
 /* Event Listeners */

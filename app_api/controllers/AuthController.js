@@ -23,9 +23,7 @@ const register = (req, res, next) => {
 
 		user.save()
 		.then(user => {
-			res.json({
-				message: 'User added successfully'
-			})
+			return res.redirect('/');
 		})
 		.catch(error => {
 			res.json({
@@ -51,10 +49,7 @@ const login = (req, res, next) => {
 
 				if(result) {
 					let token = jwt.sign({name: user.name}, 'verySecretValue', {expiresIn: '1h'})
-					res.json({
-						message: 'Login Successful!',
-						token
-					})
+					res.redirect('/')
 				} else {
 					res.json({
 						message: 'Password does not match!'

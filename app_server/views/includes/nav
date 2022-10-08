@@ -77,4 +77,16 @@
           span.navbar-toggler-icon
         #navbarCollapse.collapse.navbar-collapse.justify-content-between
           .navbar-nav.mr-auto.py-0
+            a.nav-item.nav-link(href='/') Home
+            a.nav-item.nav-link(href='shop') Shop
+            a.nav-item.nav-link(href='detail') Shop Detail
+            .nav-item.dropdown
+              a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown') Pages
+              .dropdown-menu.rounded-0.m-0
+                a.dropdown-item(href='cart') Shopping Cart
+                a.dropdown-item(href='checkout') Checkout
+            a.nav-item.nav-link.active(href='contact') Contact
+          .navbar-nav.ml-auto.py-0
+            include ./login_modal
+            include ./register_modal
 // Navbar End

@@ -11,7 +11,7 @@ var mongoose = require('mongoose');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Portfolio', name: 'FC Development' });
+  res.render('index', { title: 'Portfolio', name:req.body.username });
 }); 
 
 

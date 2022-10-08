@@ -1,4 +1,4 @@
-button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; background-color: transparent;} onclick="document.getElementById('id02').style.display='block'") Register
+button#registerButton.nav-item.nav-link(onclick="document.getElementById('id02').style.display='block'") Register
 #id02.register_modal
   form.modal-content.animate(action='/api/register' method='post')
     .imgcontainer

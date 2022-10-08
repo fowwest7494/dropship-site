@@ -1,4 +1,4 @@
-button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; background-color: transparent;} onclick="document.getElementById('id01').style.display='block'") Login
+button#loginButton.nav-item.nav-link(onclick="document.getElementById('id01').style.display='block'") Login
 #id01.modal
   form.modal-content.animate(action='/api/login' method='post')
     .imgcontainer

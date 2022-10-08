@@ -9502,7 +9502,7 @@ a.text-dark:hover, a.text-dark:focus {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  z-index: 0;
 }
 
 .section-title {
@@ -9581,4 +9581,13 @@ a.text-dark:hover, a.text-dark:focus {
   100% {
     transform: translateY(-15px);
   }
+}
+
+#loginButton{
+  border:none!important;
+  background-color:white;
+}
+#registerButton {
+  border:none!important;
+  background-color:white;
 }
