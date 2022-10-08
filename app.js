@@ -23,8 +23,6 @@ var contactRouter = require('./app_server/routes/contact');
 var checkoutRouter = require('./app_server/routes/checkout');
 var AuthRouter = require('./app_api/routes/auth');
 
-console.log(process.env.DB_PASSWORD);
-
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');
 
