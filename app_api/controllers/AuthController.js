@@ -12,7 +12,7 @@ const register = (req, res, next) => {
 		}
 
 		let user = new User({
-		name: req.body.firstName + ' ' + req.body.lastName,
+		name: req.body.firstName,
 		email: req.body.email,
 		phone: req.body.phone,
 		password: hashedPass
