@@ -48,6 +48,7 @@ const login = (req, res, next) => {
 				}
 
 				if(result) {
+					//Successful Login
 					let token = jwt.sign({name: user.name}, 'verySecretValue', {expiresIn: '1h'})
 					res.redirect('/')
 				} else {
