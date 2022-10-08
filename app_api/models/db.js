@@ -8,8 +8,12 @@ if (process.env.NODE_ENV === 'production'){
 } 
 
 console.log(process.env.NODE_ENV);
+console.log(dbURI);
 
-mongoose.connect(dbURI);
+mongoose.connect(dbURI, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+});
 
 /* Event Listeners */
 mongoose.connection.on('connected', function(){

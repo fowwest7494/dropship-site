@@ -1,16 +1,14 @@
 require('dotenv').config();
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var session = require('express-session');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const mongoose=require("mongoose");
 
 var app = express();
-
-console.log(process.env.DB_HOST)
-console.log(process.env.HEROKU_URL);
-console.log(process.env.MONGODB_URI);
 
 // Db connection
 require('./app_api/models/db');
@@ -23,7 +21,9 @@ var detailRouter = require('./app_server/routes/detail');
 var cartRouter = require('./app_server/routes/cart');
 var contactRouter = require('./app_server/routes/contact');
 var checkoutRouter = require('./app_server/routes/checkout');
-var AuthRouter = require('./app_api/routes/auth')
+var AuthRouter = require('./app_api/routes/auth');
+
+console.log(process.env.DB_PASSWORD);
 
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');

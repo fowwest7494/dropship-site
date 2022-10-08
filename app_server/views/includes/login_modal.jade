@@ -1,16 +1,16 @@
 button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; background-color: transparent;} onclick="document.getElementById('id01').style.display='block'") Login
 #id01.modal
-  form.modal-content.animate(action='/action_page' method='post')
+  form.modal-content.animate(action='/api/login' method='post')
     .imgcontainer
       span.close(onclick="document.getElementById('id01').style.display='none'" title='Close Modal') ×
       img.avatar(src='img_avatar2.png' alt='Avatar')
     .container
-      label(for='uname')
+      label(for='username')
         b Username
-      input(type='text' placeholder='Enter Username' name='uname' required='')
-      label(for='psw')
+      input(type='text' placeholder='Enter Username' name='username' required='')
+      label(for='password')
         b Password
-      input(type='password' placeholder='Enter Password' name='psw' required='')
+      input(type='password' placeholder='Enter Password' name='password' required='')
       button(type='submit') Login
       label
         input(type='checkbox' checked='checked' name='remember')

@@ -1,0 +1,38 @@
+button.nav-item.nav-link(style:{color: #D19C97; text-decoration: none; background-color: transparent;} onclick="document.getElementById('id02').style.display='block'") Register
+#id02.modal
+  form.modal-content.animate(action='/api/register' method='post')
+    .imgcontainer
+      span.close(onclick="document.getElementById('id02').style.display='none'" title='Close Modal') ×
+      img.avatar(src='img_avatar2.png' alt='Avatar')
+    .container
+      label(for='firstName')
+        b First Name
+      input(type='text' placeholder='Enter first name' name='firstName' required='true')
+      label(for='lastName')
+        b Last Name
+      input(type='text' placeholder='Enter last name' name='lastName' required='true')
+      label(for='email')
+        b Email
+      input(type='email' placeholder='Enter your email' name='email' required='true')
+      label(for='password')
+        br
+        b Password
+      input(type='password' placeholder='Enter new password' name='password' required='true')
+      button(type='submit') Register
+      label
+        input(type='checkbox' checked='checked' name='remember')
+        |  Remember me
+    .container(style='background-color:#f1f1f1')
+      button.cancelbtn(type='button' onclick="document.getElementById('id02').style.display='none'") Cancel
+      span.psw
+        | Forgot 
+        a(href='#') password?
+script.
+  // Get the modal
+  var modal = document.getElementById('id02');
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+  if (event.target == modal) {
+  modal.style.display = "none";
+  }
+  }
