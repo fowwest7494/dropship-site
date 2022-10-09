@@ -1,9 +1,15 @@
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// const uri = "mongodb+srv://fowwest7494:<password>@cluster0.qvdngap.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+// client.connect(err => {
+//   const collection = client.db("Dropship_site").collection("users");
+//   // perform actions on the collection object
+//   client.close();
+// });
 var mongoose = require('mongoose');
 var ServerApiVersion = require('mongodb');
 var dbURI = 'mongodb://localhost:27017/Dropship_site';
 
-// If in production mode, use production database. Use MONGODB_URI instead of
-// dbURI string to hide database credentials
 if (process.env.NODE_ENV === 'production'){
 	dbURI = process.env.MONGODB_URI;
 } 
@@ -52,8 +58,6 @@ process.on('SIGTERM', function(){
 });
 
 // Require schemas
-// require('./admin');
-// require('./blog');
 
 require('./User');
 

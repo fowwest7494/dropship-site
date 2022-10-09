@@ -12,10 +12,9 @@ const register = (req, res, next) => {
 		}
 
 		let user = new User({
-		name: req.body.firstName,
+		username: req.body.username,
 		email: req.body.email,
-		phone: req.body.phone,
-		password: hashedPass
+		password: hashedPass 
 		})
 
 		var errorcheck = req.body;

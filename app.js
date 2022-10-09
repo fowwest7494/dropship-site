@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 var app = express();
 
 // Db connection
-// require('./app_api/models/db');
+require('./app_api/models/db');
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
