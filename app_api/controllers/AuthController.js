@@ -22,6 +22,9 @@ const register = (req, res, next) => {
 
 		user.save()
 		.then(user => {
+			// res.json({
+			// 	message: 'User saved successfully!'
+			// })
 			return res.redirect('/');
 		})
 		.catch(error => {
