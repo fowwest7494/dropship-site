@@ -8,7 +8,7 @@
 // });
 var mongoose = require('mongoose');
 var ServerApiVersion = require('mongodb');
-var dbURI = '';
+var dbURI = 'mongodb://localhost:27017/Dropship_site';
 
 if (process.env.NODE_ENV === 'production'){
 	dbURI = process.env.MONGODB_URI;
