@@ -39,7 +39,7 @@ const login = (req, res, next) => {
 	var username = req.body.username
 	var password = req.body.password
 
-	User.findOne({$or: [{email:username}, {phone:username}]})
+	User.findOne({$or: [{username:username}]})
 	.then(user => {
 		if(user) {
 			bcrypt.compare(password, user.password, function(err, result) {
