@@ -5,7 +5,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const session = require('express-session');
-
+const router = express.Router()
 
 var app = express();
 
@@ -20,6 +20,8 @@ var detailRouter = require('./app_server/routes/detail');
 var cartRouter = require('./app_server/routes/cart');
 var contactRouter = require('./app_server/routes/contact');
 var checkoutRouter = require('./app_server/routes/checkout');
+var profileRouter = require('./app_server/routes/profile');
+
 var AuthRouter = require('./app_api/routes/auth');
 
 app.set('views', path.join(__dirname, './app_server/views'));

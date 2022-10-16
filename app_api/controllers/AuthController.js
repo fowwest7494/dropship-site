@@ -17,15 +17,12 @@ const register = (req, res, next) => {
 		password: hashedPass 
 		})
 
-		var errorcheck = req.body;
-		console.log(JSON.stringify(errorcheck));
-
 		user.save()
 		.then(user => {
 			// res.json({
 			// 	message: 'User saved successfully!'
 			// })
-			return res.redirect('/');
+			return res.redirect('back');
 		})
 		.catch(error => {
 			res.json({
@@ -36,10 +33,10 @@ const register = (req, res, next) => {
 }
 
 const login = (req, res, next) => {
-	var username = req.body.username
-	var password = req.body.password
+	const username = req.body.username
+	const password = req.body.password
 
-	User.findOne({$or: [{username:username}]})
+	User.findOne({$or: [{username:username}, {email:username}]})
 	.then(user => {
 		if(user) {
 			bcrypt.compare(password, user.password, function(err, result) {
@@ -51,7 +48,8 @@ const login = (req, res, next) => {
 
 				if(result) {
 					//Successful Login
-					let token = jwt.sign({name: user.name}, 'verySecretValue', {expiresIn: '1h'})
+					let token = jwt.sign({name: user.username}, 'verySecretValue', {expiresIn: '1h'})
+					console.log(req.session)
 					res.redirect('/')
 				} else {
 					res.json({

@@ -23,6 +23,7 @@
     "mongoose": "^6.6.3",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.16",
-    "paypal-rest-sdk": "^1.8.1"
+    "paypal-rest-sdk": "^1.8.1",
+    "session": "^0.1.0"
   }
 }
