@@ -1,7 +1,16 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const express = require('express');
+const path = require('path');
+const router = express.Router()
 
+var app = express()
+
+app.set('views', path.join(__dirname, './app_server/views'));
+app.set('view engine', 'jade');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 const register = (req, res, next) => {
 	bcrypt.hash(req.body.password, 10, function(err, hashedPass) {
@@ -50,7 +59,9 @@ const login = (req, res, next) => {
 					//Successful Login
 					let token = jwt.sign({name: user.username}, 'verySecretValue', {expiresIn: '1h'})
 					console.log(req.session)
-					res.redirect('/')
+					return res.render('index', {name: req.body.username})
+					
+					
 				} else {
 					res.json({
 						message: 'Password does not match!'
@@ -66,5 +77,5 @@ const login = (req, res, next) => {
 }
 
 module.exports = {
-	register, login
+	register, login, router
 }
