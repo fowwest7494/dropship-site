@@ -4,10 +4,10 @@ const session = require('express-session');
 var mongoose = require('mongoose');
 
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Portfolio'});
+	
+	res.render('index', {name: req.query});
 }); 
 
 

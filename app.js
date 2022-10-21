@@ -32,6 +32,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+	secret: 'secret-key',
+	resave: false,
+	saveUninitialized:false,
+	cookie: {maxAge: 7200000},
+	sameSite: true
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -40,9 +47,11 @@ app.use('/detail', detailRouter);
 app.use('/cart', cartRouter);
 app.use('/contact', contactRouter);
 app.use('/checkout', checkoutRouter);
+app.use('/profile', profileRouter);
 
 //api
 app.use('/api', AuthRouter)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

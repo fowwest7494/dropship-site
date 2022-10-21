@@ -1,16 +1,11 @@
 const User = require('../models/User')
 const bcrypt = require('bcryptjs')
+const path = require('path')
 const jwt = require('jsonwebtoken')
-const express = require('express');
-const path = require('path');
-const router = express.Router()
+var express = require('express')
+var session = require('express-session')
+const cookieParser = require('cookie-parser')
 
-var app = express()
-
-app.set('views', path.join(__dirname, './app_server/views'));
-app.set('view engine', 'jade');
-
-app.use(express.static(path.join(__dirname, 'public')));
 
 const register = (req, res, next) => {
 	bcrypt.hash(req.body.password, 10, function(err, hashedPass) {
@@ -26,12 +21,12 @@ const register = (req, res, next) => {
 		password: hashedPass 
 		})
 
-		user.save()
+		user.save() 
 		.then(user => {
 			// res.json({
 			// 	message: 'User saved successfully!'
 			// })
-			return res.redirect('back');
+			res.redirect('/?name=' + user.username);
 		})
 		.catch(error => {
 			res.json({
@@ -56,13 +51,14 @@ const login = (req, res, next) => {
 				}
 
 				if(result) {
-					//Successful Login
-					let token = jwt.sign({name: user.username}, 'verySecretValue', {expiresIn: '1h'})
-					console.log(req.session)
-					return res.render('index', {name: req.body.username})
+				    //Successful Login
+				    let token = jwt.sign({name: user.name}, 'verySecretValue', {expiresIn: '1h'})
+				    // res.json({user})
+				    // res.session.username = user.name;
+				    res.redirect('/?name=' + user.username)
+					}
 					
-					
-				} else {
+				else {
 					res.json({
 						message: 'Password does not match!'
 					})
@@ -74,8 +70,9 @@ const login = (req, res, next) => {
 			})
 		}
 	})
+	 
 }
 
 module.exports = {
-	register, login, router
+	register, login
 }
