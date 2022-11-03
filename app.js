@@ -11,6 +11,7 @@ var app = express();
 
 // Db connection
 require('./app_api/models/db');
+console.log('We did our first pull-request')
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
