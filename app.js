@@ -5,16 +5,10 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan')
 const router = express.Router()
-const passportSetup = require('./oauth/passport-setup.js')
+const passportSetup = require('./oauth/passport-setup')
 const cookieSession = require('cookie-session')
 const expressSession = require('express-session')
 const passport = require('passport')
-
-
-var app = express();
-
-// Db connection
-require('./app_api/models/db');
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
@@ -28,6 +22,11 @@ var checkoutRouter = require('./app_server/routes/checkout');
 // API Routes
 var authRouter = require('./app_api/routes/auth-routes')
 var profileRouter = require('./app_api/routes/profile-routes')
+
+var app = express();
+
+// Db connection
+require('./app_api/models/db');
 
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');
@@ -55,6 +54,7 @@ app.use('/detail', detailRouter);
 app.use('/cart', cartRouter);
 app.use('/contact', contactRouter);
 app.use('/checkout', checkoutRouter);
+app.use('/auth',authRouter); 
 app.use('/profile', profileRouter);
 
 //api

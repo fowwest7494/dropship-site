@@ -27,7 +27,6 @@ passport.use(
 		console.log('user is: ' + currentUser)
 		done(null, currentUser)
 		} else {
-			console.log("didn't work")
 			// if not, create user in db
 			new User({
 			username: profile.displayName,

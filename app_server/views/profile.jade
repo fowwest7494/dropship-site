@@ -1,13 +1,15 @@
 extends layout
 
 block content
-  body
+  
     // Topbar Start
     .container-fluid
       .row.bg-secondary.py-2.px-xl-5
         .col-lg-6.d-none.d-lg-block
           .d-inline-flex.align-items-center
-            a.text-dark(href='') #{user}
+            a.text-dark(href='') #{user.username}
+            span.text-muted.px-2 |          
+            a.text-dark(href='') FAQ
             span.text-muted.px-2 |
             a.text-dark(href='') Help
             span.text-muted.px-2 |
@@ -92,19 +94,21 @@ block content
                 a.nav-item.nav-link(href='contact') Contact
               .navbar-nav.ml-auto.py-0
                 // Login Modal
+                a(href='/auth/logout') 
+                  button#loginButton.nav-item.nav-link Logout
                 include ./includes/login_modal
                 include ./includes/register_modal
           #header-carousel.carousel.slide(data-ride='carousel')
             .carousel-inner
               .carousel-item.active(style='height: 410px;')
-                img.img-fluid(src='./assets/img/carousel-1.jpg' alt='Image')
+                img.img-fluid(src='../../assets/img/carousel-1.jpg' alt='Image')
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
                   .p-3(style='max-width: 700px;')
                     h4.text-light.text-uppercase.font-weight-medium.mb-3 10% Off Your First Order
                     h3.display-4.text-white.font-weight-semi-bold.mb-4 Fashionable Dress
                     a.btn.btn-light.py-2.px-3(href='') Shop Now
               .carousel-item(style='height: 410px;')
-                img.img-fluid(src='./assets/img/carousel-2.jpg' alt='Image')
+                img.img-fluid(src='../../assets/img/carousel-2.jpg' alt='Image')
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center
                   .p-3(style='max-width: 700px;')
                     h4.text-light.text-uppercase.font-weight-medium.mb-3 10% Off Your First Order
@@ -144,52 +148,52 @@ block content
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-1.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Men's dresses
+              img#cat-1(src='../../assets/img/cat-1.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
         .col-lg-4.col-md-6.pb-1
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-2.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Women's dresses
+              img#cat-2(src='../../assets/img/cat-2.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
         .col-lg-4.col-md-6.pb-1
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-3.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Baby's dresses
+              img#cat-3(src='../../assets/img/cat-3.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
         .col-lg-4.col-md-6.pb-1
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-4.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Accerssories
+              img.img-fluid(src='../../assets/img/cat-4.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
         .col-lg-4.col-md-6.pb-1
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-5.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Bags
+              img.img-fluid(src='../../assets/img/cat-5.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
         .col-lg-4.col-md-6.pb-1
           .cat-item.d-flex.flex-column.border.mb-4(style='padding: 30px;')
             p.text-right 15 Products
             a.cat-img.position-relative.overflow-hidden.mb-3(href='')
-              img.img-fluid(src='./assets/img/cat-6.jpg' alt='')
-            h5.font-weight-semi-bold.m-0 Shoes
+              img.img-fluid(src='../../assets/img/cat-6.jpg' alt='')
+            h5.font-weight-semi-bold.m-0 Lorem ipsum dolor
     // Categories End
     // Offer Start
     .container-fluid.offer.pt-5
       .row.px-xl-5
         .col-md-6.pb-4
           .position-relative.bg-secondary.text-center.text-md-right.text-white.mb-2.py-5.px-5
-            img(src='./assets/img/offer-1.png' alt='')
+            img(src='../../assets/img/offer-1.png' alt='')
             .position-relative(style='z-index: 1;')
               h5.text-uppercase.text-primary.mb-3 20% off the all order
               h1.mb-4.font-weight-semi-bold Spring Collection
               a.btn.btn-outline-primary.py-md-2.px-md-3(href='') Shop Now
         .col-md-6.pb-4
           .position-relative.bg-secondary.text-center.text-md-left.text-white.mb-2.py-5.px-5
-            img(src='./assets/img/offer-2.png' alt='')
+            img(src='../../assets/img/offer-2.png' alt='')
             .position-relative(style='z-index: 1;')
               h5.text-uppercase.text-primary.mb-3 20% off the all order
               h1.mb-4.font-weight-semi-bold Winter Collection
@@ -204,15 +208,15 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-1.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-1.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
-              h6.text-truncate.mb-3 Colorful Stylish Shirt
+              h6.text-truncate.mb-3 Star Wars The Black Series Bastilla Shan 6-Inch Action Figure
               .d-flex.justify-content-center
                 h6 $123.00
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -221,7 +225,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-2.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-2.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -229,7 +233,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -238,7 +242,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-3.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-3.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -246,7 +250,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -255,15 +259,15 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-4.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-4.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
-              h6.text-truncate.mb-3 Colorful Stylish Shirt
+              h6.text-truncate.mb-3 Star Wars The Black Series Bastilla Shan 6-Inch Action Figure
               .d-flex.justify-content-center
                 h6 $123.00
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -272,7 +276,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-5.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-5.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -280,7 +284,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -289,7 +293,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-6.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-6.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -297,7 +301,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -306,7 +310,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-7.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-7.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -314,7 +318,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -323,7 +327,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-8.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-8.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -331,7 +335,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -362,7 +366,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-1.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-1.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -370,7 +374,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -379,7 +383,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-2.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-2.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -387,7 +391,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -396,7 +400,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/./assets/img/product-3.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-3.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -404,7 +408,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -413,7 +417,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-4.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-4.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -421,7 +425,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -430,15 +434,15 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-5.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-5.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
-              h6.text-truncate.mb-3 Colorful Stylish Shirt
+              h6.text-truncate.mb-3 Star Wars The Black Series Doctor Aphra 6-Inch Action Figure
               .d-flex.justify-content-center
-                h6 $123.00
+                h6 $27.99
                 h6.text-muted.ml-2
-                  del $123.00
+                  del $39.99
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -447,15 +451,15 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-6.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-6.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
-                h6 $123.00
+                h6 $19.99
                 h6.text-muted.ml-2
-                  del $123.00
+                  del $29.99
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -464,7 +468,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-7.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-7.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -472,7 +476,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -481,7 +485,7 @@ block content
         .col-lg-3.col-md-6.col-sm-12.pb-1
           .card.product-item.border-0.mb-4
             .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-              img.img-fluid.w-100(src='./assets/img/product-8.jpg' alt='')
+              img.img-fluid.w-100(src='../../assets/img/product-8.jpg' alt='')
             .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
               h6.text-truncate.mb-3 Colorful Stylish Shirt
               .d-flex.justify-content-center
@@ -489,7 +493,7 @@ block content
                 h6.text-muted.ml-2
                   del $123.00
             .card-footer.d-flex.justify-content-between.bg-light.border
-              a.btn.btn-sm.text-dark.p-0(href='')
+              a.btn.btn-sm.text-dark.p-0(href='/detail')
                 i.fas.fa-eye.text-primary.mr-1
                 | View Detail
               a.btn.btn-sm.text-dark.p-0(href='')
@@ -502,21 +506,21 @@ block content
         .col
           .owl-carousel.vendor-carousel
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-1.jpg' alt='')
+              img(src='../../assets/img/vendor-1.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-2.jpg' alt='')
+              img(src='../../assets/img/vendor-2.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-3.jpg' alt='')
+              img(src='../../assets/img/vendor-3.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-4.jpg' alt='')
+              img(src='../../assets/img/vendor-4.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-5.jpg' alt='')
+              img(src='../../assets/img/vendor-5.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-6.jpg' alt='')
+              img(src='../../assets/img/vendor-6.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-7.jpg' alt='')
+              img(src='../../assets/img/vendor-7.jpg' alt='')
             .vendor-item.border.p-4
-              img(src='./assets/img/vendor-8.jpg' alt='')
+              img(src='../../assets/img/vendor-8.jpg' alt='')
     // Vendor End
   // Footer
   include ./includes/footer
