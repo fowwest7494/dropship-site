@@ -3,9 +3,13 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-const session = require('express-session');
+const logger = require('morgan')
 const router = express.Router()
+const passportSetup = require('./oauth/passport-setup.js')
+const cookieSession = require('cookie-session')
+const expressSession = require('express-session')
+const passport = require('passport')
+
 
 var app = express();
 
@@ -20,25 +24,29 @@ var detailRouter = require('./app_server/routes/detail');
 var cartRouter = require('./app_server/routes/cart');
 var contactRouter = require('./app_server/routes/contact');
 var checkoutRouter = require('./app_server/routes/checkout');
-var profileRouter = require('./app_server/routes/profile');
 
-var AuthRouter = require('./app_api/routes/auth');
+// API Routes
+var authRouter = require('./app_api/routes/auth-routes')
+var profileRouter = require('./app_api/routes/profile-routes')
 
 app.set('views', path.join(__dirname, './app_server/views'));
 app.set('view engine', 'jade');
+
+app.use(cookieSession({
+  // One day
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [process.env.cookieKey]
+}))
+
+//initialize passport
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({
-	secret: 'secret-key',
-	resave: false,
-	saveUninitialized:false,
-	cookie: {maxAge: 7200000},
-	sameSite: true
-}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -50,7 +58,10 @@ app.use('/checkout', checkoutRouter);
 app.use('/profile', profileRouter);
 
 //api
-app.use('/api', AuthRouter)
+app.use('/', indexRouter);
+app.use('/auth', authRouter);  
+app.use('/users', usersRouter);
+app.use('/profile', profileRouter);
 
 
 // catch 404 and forward to error handler

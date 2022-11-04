@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	
-	res.render('index', {name: req.query});
+	res.render('index', {user: req.user});
 }); 
 
 

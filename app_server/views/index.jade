@@ -7,7 +7,7 @@ block content
       .row.bg-secondary.py-2.px-xl-5
         .col-lg-6.d-none.d-lg-block
           .d-inline-flex.align-items-center
-            a.text-dark(href='') #{name.name}
+            a.text-dark(href='') #{user}
             span.text-muted.px-2 |          
             a.text-dark(href='') FAQ
             span.text-muted.px-2 |
@@ -94,6 +94,8 @@ block content
                 a.nav-item.nav-link(href='contact') Contact
               .navbar-nav.ml-auto.py-0
                 // Login Modal
+                a(href='/auth/logout') 
+                  button#loginButton.nav-item.nav-link Logout
                 include ./includes/login_modal
                 include ./includes/register_modal
           #header-carousel.carousel.slide(data-ride='carousel')
