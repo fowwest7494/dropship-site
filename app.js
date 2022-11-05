@@ -40,12 +40,13 @@ app.use(cookieSession({
 //initialize passport
 app.use(passport.initialize())
 app.use(passport.session())
+require('./oauth/passport-setup');
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));;
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -54,7 +55,7 @@ app.use('/detail', detailRouter);
 app.use('/cart', cartRouter);
 app.use('/contact', contactRouter);
 app.use('/checkout', checkoutRouter);
-app.use('/auth',authRouter); 
+app.use('/auth', authRouter); 
 app.use('/profile', profileRouter);
 
 //api
