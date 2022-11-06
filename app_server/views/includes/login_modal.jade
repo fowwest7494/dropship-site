@@ -11,8 +11,9 @@ button#loginButton.nav-item.nav-link(onclick="document.getElementById('id01').st
         b Password
       input(type='password' placeholder='Enter Password' name='password' required='')
       button#login-btn.button-6(type='submit') Login
-      a(href="/auth/google").loginBtn.loginBtn--google Continue with Google
-      a(href="/auth/facebook").loginBtn.loginBtn--facebook Continue with Facebook
+      div.social-media-buttons
+        a(href="/auth/google").loginBtn.loginBtn--google Continue with Google
+        a(href="/auth/facebook").loginBtn.loginBtn--facebook    Continue with Facebook
       label
         input(type='checkbox' checked='checked' name='remember')
         |  Remember me

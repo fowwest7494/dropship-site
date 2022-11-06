@@ -140,8 +140,8 @@ body { padding: 2em; }
   box-sizing: border-box;
   position: relative;
   /* width: 13em;  - apply for fixed size */
-  margin: 0.2em;
-  padding: 0 15px 0 46px;
+  margin: 0.3em;
+  padding: 10px 15px 10px 46px;
   border: none;
   text-align: left;
   line-height: 34px;
@@ -169,6 +169,7 @@ body { padding: 2em; }
 
 /* Facebook */
 .loginBtn--facebook {
+  margin-top: 10px !important;
   background-color: #4C69BA;
   background-image: linear-gradient(#4C69BA, #3B55A0);
   /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
@@ -197,6 +198,12 @@ body { padding: 2em; }
 .loginBtn--google:hover,
 .loginBtn--google:focus {
   background: #E74B37;
+}
+
+.social-media-buttons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 
