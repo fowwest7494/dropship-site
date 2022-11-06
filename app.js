@@ -13,12 +13,6 @@ const passport = require('passport')
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
-var usersRouter = require('./app_server/routes/users');
-var shopRouter = require('./app_server/routes/shop');
-var detailRouter = require('./app_server/routes/detail');
-var cartRouter = require('./app_server/routes/cart');
-var contactRouter = require('./app_server/routes/contact');
-var checkoutRouter = require('./app_server/routes/checkout');
 
 // API Routes
 var authRouter = require('./app_api/routes/auth-routes')
@@ -49,20 +43,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));;
 
+// App server routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/shop', shopRouter);
-app.use('/detail', detailRouter);
-app.use('/cart', cartRouter);
-app.use('/contact', contactRouter);
-app.use('/checkout', checkoutRouter);
-app.use('/auth', authRouter); 
-app.use('/profile', profileRouter);
 
 //api
-app.use('/', indexRouter);
 app.use('/auth', authRouter);  
-app.use('/users', usersRouter);
 app.use('/profile', profileRouter);
 
 
