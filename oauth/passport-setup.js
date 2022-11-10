@@ -19,7 +19,7 @@ passport.use(
 	callbackURL: '/auth/google/redirect',
 	clientID: process.env.clientID,
 	clientSecret: process.env.clientSecret
-}, (accessToken, refreshToken, profile, done) => {
+}, async (accessToken, refreshToken, profile, done) => {
 	// passport callback function
 
 	User.findOne({googleId:profile.id}).then((currentUser) => {

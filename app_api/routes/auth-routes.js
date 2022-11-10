@@ -6,7 +6,7 @@ const passport = require('passport')
 // auth login
 router.get('/login', (req, res) => {
 	// Come back
-	res.render('profile', {user: req.user})
+	res.render('index', {user: req.user})
 })
 
 // auth logout

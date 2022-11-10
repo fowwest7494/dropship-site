@@ -7,7 +7,36 @@ var app = express()
 /* GET profile home page. */
 router.get('/profile', function(req, res, next) {
 
-    res.render('index', {user:req.user})
+      var user = ""
+  var logoutDisplay = ''
+  var loginDisplay = ''
+  var getUser = function() {
+    if (req.user) {
+      user = req.user
+    } else {
+      user = ""
+    }
+  }
+  var toggleLoginRegister = function() {
+    if(req.user) {
+      logoutDisplay = 'block'
+      loginDisplay = 'none'
+      registerDisplay = 'none'
+    } else {
+      logoutDisplay = 'none'
+      loginDisplay = 'block'
+      registerDisplay = 'block'
+    }
+  }
+  toggleLoginRegister();
+  getUser();
+    res.render('profile', {
+    user:user, 
+    assets: "../.", 
+    logoutDisplay: logoutDisplay, 
+    loginDisplay: loginDisplay, 
+    registerDisplay: registerDisplay 
+  });
 }); 
 
 module.exports = router 

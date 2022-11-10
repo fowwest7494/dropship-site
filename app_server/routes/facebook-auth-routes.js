@@ -1,11 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const session = require('express-session');
 var mongoose = require('mongoose');
 
+var app = express()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+// attach routes to profile
+
+/* GET shop page. */
+router.get('/shop', function(req, res, next) {
   var user = ""
   var logoutDisplay = ''
   var loginDisplay = ''
@@ -29,16 +31,50 @@ router.get('/', function(req, res, next) {
   }
   toggleLoginRegister();
   getUser();
-	res.render('index', {
+    res.render('shop', {
     user:user, 
-    assets: "", 
+    assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
     registerDisplay: registerDisplay 
   });
 }); 
 
-// Get cart page
+/* GET shop-detail page. */
+router.get('/detail', function(req, res, next) {
+  var user = ""
+  var logoutDisplay = ''
+  var loginDisplay = ''
+  var getUser = function() {
+    if (req.user) {
+      user = req.user
+    } else {
+      user = ""
+    }
+  }
+  var toggleLoginRegister = function() {
+    if(req.user) {
+      logoutDisplay = 'block'
+      loginDisplay = 'none'
+      registerDisplay = 'none'
+    } else {
+      logoutDisplay = 'none'
+      loginDisplay = 'block'
+      registerDisplay = 'block'
+    }
+  }
+  toggleLoginRegister();
+  getUser();
+    res.render('detail', {
+    user:user, 
+    assets: "../.", 
+    logoutDisplay: logoutDisplay, 
+    loginDisplay: loginDisplay, 
+    registerDisplay: registerDisplay 
+  });
+}); 
+
+/* GET shopping cart page. */
 router.get('/cart', function(req, res, next) {
   var user = ""
   var logoutDisplay = ''
@@ -63,9 +99,9 @@ router.get('/cart', function(req, res, next) {
   }
   toggleLoginRegister();
   getUser();
-  res.render('cart', {
+    res.render('cart', {
     user:user, 
-    assets: "", 
+    assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
     registerDisplay: registerDisplay 
@@ -97,9 +133,9 @@ router.get('/checkout', function(req, res, next) {
   }
   toggleLoginRegister();
   getUser();
-  res.render('checkout', {
+    res.render('checkout', {
     user:user, 
-    assets: "", 
+    assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
     registerDisplay: registerDisplay 
@@ -131,83 +167,13 @@ router.get('/contact', function(req, res, next) {
   }
   toggleLoginRegister();
   getUser();
-  res.render('contact', {
+    res.render('contact', {
     user:user, 
-    assets: "", 
-    logoutDisplay: logoutDisplay, 
-    loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
-  });
-}); 
-
-/* GET details page. */
-router.get('/detail', function(req, res, next) {
-  var user = ""
-  var logoutDisplay = ''
-  var loginDisplay = ''
-  var getUser = function() {
-    if (req.user) {
-      user = req.user
-    } else {
-      user = ""
-    }
-  }
-  var toggleLoginRegister = function() {
-    if(req.user) {
-      logoutDisplay = 'block'
-      loginDisplay = 'none'
-      registerDisplay = 'none'
-    } else {
-      logoutDisplay = 'none'
-      loginDisplay = 'block'
-      registerDisplay = 'block'
-    }
-  }
-  toggleLoginRegister();
-  getUser();
-  res.render('detail', {
-    user:user, 
-    assets: "", 
-    logoutDisplay: logoutDisplay, 
-    loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
-  });
-}); 
-
-/* GET shop page. */
-router.get('/shop', function(req, res, next) {
-  var user = ""
-  var logoutDisplay = ''
-  var loginDisplay = ''
-  var getUser = function() {
-    if (req.user) {
-      user = req.user
-    } else {
-      user = ""
-    }
-  }
-  var toggleLoginRegister = function() {
-    if(req.user) {
-      logoutDisplay = 'block'
-      loginDisplay = 'none'
-      registerDisplay = 'none'
-    } else {
-      logoutDisplay = 'none'
-      loginDisplay = 'block'
-      registerDisplay = 'block'
-    }
-  }
-  toggleLoginRegister();
-  getUser();
-  res.render('shop', {
-    user:user, 
-    assets: "", 
+    assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
     registerDisplay: registerDisplay 
   });
 });
 
-
-module.exports = router;
-
+module.exports = router 

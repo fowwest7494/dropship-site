@@ -1,4 +1,3 @@
-button#loginButton.nav-item.nav-link(onclick="document.getElementById('id01').style.display='block'") Login
 #id01.modal
   form.modal-content.animate(action='/auth/google' method='get')
     .imgcontainer
@@ -13,7 +12,8 @@ button#loginButton.nav-item.nav-link(onclick="document.getElementById('id01').st
       button#login-btn.button-6(type='submit') Login
       div.social-media-buttons
         a(href="/auth/google").loginBtn.loginBtn--google Continue with Google
-        a(href="/auth/facebook").loginBtn.loginBtn--facebook    Continue with Facebook
+        br
+        a(href="/auth/facebook").loginBtn.loginBtn--facebook Continue with Facebook
       label
         input(type='checkbox' checked='checked' name='remember')
         |  Remember me

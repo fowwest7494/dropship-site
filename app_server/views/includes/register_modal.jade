@@ -1,4 +1,3 @@
-button#registerButton.nav-item.nav-link(onclick="document.getElementById('id02').style.display='block'") Register
 #id02.register_modal
   form.modal-content.animate(action='/api/register' method='post')
     .imgcontainer
@@ -13,12 +12,15 @@ button#registerButton.nav-item.nav-link(onclick="document.getElementById('id02')
       label(for='password')
         b Password
       input(type='password' placeholder='Enter new password' name='password' required='true')
-      button(type='submit') Register
+      button#login-btn.button-6(type='submit') Register
+      div.social-media-buttons
+        a(href="/auth/google").loginBtn.loginBtn--google Continue with Google
+        a(href="/auth/facebook").loginBtn.loginBtn--facebook    Continue with Facebook
       label
         input(type='checkbox' checked='checked' name='remember')
         |  Remember me
     .container(style='background-color:#f1f1f1')
-      button.cancelbtn(type='button' onclick="document.getElementById('id02').style.display='none'") Cancel
+      button.cancelbtn#login-btn.button-6(type='button' onclick="document.getElementById('id02').style.display='none'") Cancel
       span.psw
         | Forgot 
         a(href='#') password?

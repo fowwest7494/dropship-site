@@ -7,6 +7,8 @@ block content
       .row.bg-secondary.py-2.px-xl-5
         .col-lg-6.d-none.d-lg-block
           .d-inline-flex.align-items-center
+            a.text-dark(href='') #{user.username}
+            span.text-muted.px-2 |
             a.text-dark(href='') FAQs
             span.text-muted.px-2 |
             a.text-dark(href='') Help
@@ -91,6 +93,10 @@ block content
                     a.dropdown-item(href='checkout') Checkout
                 a.nav-item.nav-link(href='contact') Contact
               .navbar-nav.ml-auto.py-0
+                a(href='/auth/logout' style='display:#{logoutDisplay}') 
+                  button#logoutButton.nav-item.nav-link Logout
+                button#loginButton.nav-item.nav-link(style= "display:#{loginDisplay}" onclick="document.getElementById('id01').style.display='block'") Login
+                button#registerButton.nav-item.nav-link(style= "display:#{registerDisplay}" onclick="document.getElementById('id02').style.display='block'") Register
                 include ./includes/login_modal
                 include ./includes/register_modal
     // Navbar End

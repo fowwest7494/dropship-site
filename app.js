@@ -13,6 +13,8 @@ const passport = require('passport')
 
 // Routes
 var indexRouter = require('./app_server/routes/index');
+var googleAuthRouter = require('./app_server/routes/google-auth-routes')
+var facebookAuthRouter = require('./app_server/routes/facebook-auth-routes')
 
 // API Routes
 var authRouter = require('./app_api/routes/auth-routes')
@@ -41,10 +43,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));;
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 // App server routes
 app.use('/', indexRouter);
+app.use('/auth/google', googleAuthRouter);
+app.use('/auth/facebook', facebookAuthRouter);
 
 //api
 app.use('/auth', authRouter);  

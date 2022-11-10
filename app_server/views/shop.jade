@@ -7,6 +7,8 @@ block content
       .row.bg-secondary.py-2.px-xl-5
         .col-lg-6.d-none.d-lg-block
           .d-inline-flex.align-items-center
+            a.text-dark(href='') #{user.username}
+            span.text-muted.px-2 |
             a.text-dark(href='') FAQs
             span.text-muted.px-2 |
             a.text-dark(href='') Help
@@ -91,6 +93,10 @@ block content
                     a.dropdown-item(href='checkout') Checkout
                 a.nav-item.nav-link(href='contact') Contact
               .navbar-nav.ml-auto.py-0
+                a(href='/auth/logout' style='display:#{logoutDisplay}') 
+                  button#logoutButton.nav-item.nav-link Logout
+                button#loginButton.nav-item.nav-link(style= "display:#{loginDisplay}" onclick="document.getElementById('id01').style.display='block'") Login
+                button#registerButton.nav-item.nav-link(style= "display:#{registerDisplay}" onclick="document.getElementById('id02').style.display='block'") Register
                 include ./includes/login_modal
                 include ./includes/register_modal
     // Navbar End
@@ -218,7 +224,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-1.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-1.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -235,7 +241,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-2.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-2.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -252,7 +258,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-3.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-3.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -269,7 +275,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-4.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-4.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -286,7 +292,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-5.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-5.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -303,7 +309,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-6.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-6.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -320,7 +326,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-7.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-7.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -337,7 +343,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-8.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-8.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
@@ -354,7 +360,7 @@ block content
             .col-lg-4.col-md-6.col-sm-12.pb-1
               .card.product-item.border-0.mb-4
                 .card-header.product-img.position-relative.overflow-hidden.bg-transparent.border.p-0
-                  img.img-fluid.w-100(src='./assets/img/product-1.jpg' alt='')
+                  img.img-fluid.w-100(src='#{assets}./assets/img/product-1.jpg' alt='')
                 .card-body.border-left.border-right.text-center.p-0.pt-4.pb-3
                   h6.text-truncate.mb-3 Colorful Stylish Shirt
                   .d-flex.justify-content-center
