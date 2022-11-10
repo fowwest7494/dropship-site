@@ -36,7 +36,8 @@ router.get('/shop', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    shopActive: 'active' 
   });
 }); 
 
@@ -70,7 +71,8 @@ router.get('/detail', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    detailActive: 'active' 
   });
 }); 
 
@@ -104,7 +106,9 @@ router.get('/cart', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    pagesActive: 'active',
+    cartActive: 'active' 
   });
 }); 
 
@@ -138,7 +142,9 @@ router.get('/checkout', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    pagesActive: 'active',
+    checkoutActive: 'active' 
   });
 }); 
 
@@ -172,7 +178,8 @@ router.get('/contact', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    contactActive: 'active' 
   });
 });
 

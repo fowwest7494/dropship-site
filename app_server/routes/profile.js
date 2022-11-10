@@ -7,7 +7,7 @@ var app = express()
 /* GET profile home page. */
 router.get('/profile', function(req, res, next) {
 
-      var user = ""
+  var user = ""
   var logoutDisplay = ''
   var loginDisplay = ''
   var getUser = function() {
@@ -35,7 +35,8 @@ router.get('/profile', function(req, res, next) {
     assets: "../.", 
     logoutDisplay: logoutDisplay, 
     loginDisplay: loginDisplay, 
-    registerDisplay: registerDisplay 
+    registerDisplay: registerDisplay,
+    homeActive: 'active'
   });
 }); 
 
